@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import { Providers } from "@/components/providers";
+import { Toaster } from "@/components/ui/sonner";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 
@@ -21,7 +23,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Clique Lounge",
-  description: "A Comfy Place to Study and Vibe",
+  description: "A Comfy Place to Study and Vibe - Instagram Clone + Music + Pomodoro",
 };
 
 export default function RootLayout({
@@ -34,13 +36,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased transition-all duration-600 ease-in-out`}
       >
-         <ThemeProvider
+        <Providers>
+          <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
           >
             {children}
           </ThemeProvider>
+          <Toaster position="top-center" />
+        </Providers>
       </body>
     </html>
   );
