@@ -24,8 +24,7 @@ const mainNavItems = [
   { href: "/feed", icon: Home, label: "Feed" },
   { href: "/explore", icon: Search, label: "Explore" },
   { href: "/create", icon: PlusSquare, label: "Create" },
-  { href: "/stories", icon: PlusSquare, label: "Stories" },
-];
+  { href: "/stories", icon: PlusSquare, label: "Stories" },];
 
 const toolNavItems = [
   { href: "/pomodoro", icon: Timer, label: "Pomodoro" },
